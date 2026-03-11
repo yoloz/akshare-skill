@@ -1,4 +1,4 @@
-# AKShare Stock Skill for AI Assistants
+# AKShare Skill for AI Assistants
 
 这是一个专为 AI 助手（如 Claude, ChatGPT, Moss 等）设计的 Skill 工具集，旨在赋予大语言模型获取、处理和分析中国 A 股市场数据的能力。本工具基于强大的 [AKShare](https://github.com/akfamily/akshare) 开源财经数据接口。
 
@@ -11,15 +11,15 @@
 
 ## 📂 仓库结构
 
-仓库采用了模块化的目录结构，核心功能位于 `akshare-stock` 目录下：
+仓库采用了模块化的目录结构，核心功能位于 `akshare` 目录下：
 
 ```text
 .
 ├── README.md                # 项目说明文档（本文件）
 ├── LICENSE                  # 许可证文件
-└── akshare-stock/           # Skill 核心目录
+└── akshare/                 # Skill 核心目录
     ├── SKILL.md             # AI 助手使用的 Skill 定义文件
-    ├── config.yaml          # 配置文件
+    ├── config.yaml          # 配置文件(可选)
     ├── scripts/             # Python 功能脚本
     │   ├── analyze_investment.py   # 智能投资分析
     │   ├── stock_analyzer.py       # 综合分析报告
@@ -40,14 +40,14 @@ pip install akshare pandas numpy pyyaml
 
 ### 2. 作为 Skill 使用
 
-将 `akshare-stock` 目录集成到您的 AI Agent 系统中。AI 助手可以通过读取 `SKILL.md` 理解如何调用 `scripts/` 下的工具。
+将 `akshare` 目录集成到您的 AI Agent 系统中。AI 助手可以通过读取 `SKILL.md` 理解如何调用 `scripts/` 下的工具。
 
 ### 3. 独立运行脚本
 
 您也可以直接运行脚本进行测试或数据获取：
 
 ```bash
-cd akshare-stock/scripts
+cd akshare/scripts
 
 # 📊 智能投资分析（生成包含估值、资金面、技术面的综合建议）
 python analyze_investment.py 600519
@@ -75,7 +75,7 @@ python stock_analyzer.py 600519 -o report.md
 
 ## 🛠️ 配置
 
-在 `akshare-stock/config.yaml` 中可以自定义配置：
+在 `akshare/config.yaml` 中可以自定义配置：
 *   **默认股票池**：设置您关注的股票列表。
 *   **缓存策略**：调整不同类型数据的缓存过期时间。
 *   **定时任务**：设置数据自动更新的时间点。

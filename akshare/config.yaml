@@ -1,4 +1,4 @@
-# AKShare Stock Skill 配置文件
+# AKShare Skill配置文件(可选)
 
 # 监控股票列表
 watchlist:
@@ -12,7 +12,7 @@ watchlist:
 # 定时任务配置
 scheduler:
   # 是否启用定时任务
-  enabled: true
+  enabled: false
   
   # 每日收盘后自动获取数据 (格式: HH:MM)
   daily_fetch_time: "15:30"
