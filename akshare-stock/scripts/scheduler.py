@@ -199,9 +199,9 @@ def run_scheduler(config: dict):
 
 def main():
     parser = argparse.ArgumentParser(description='定时任务调度器')
-    parser.add_argument('--run-now', action='store_true', help='立即执行一次')
-    parser.add_argument('--report', action='store_true', help='仅生成报告')
-    parser.add_argument('--fetch', action='store_true', help='仅获取数据')
+    parser.add_argument('--run-now', action='store_false', help='立即执行一次')
+    parser.add_argument('--report', action='store_false', help='仅生成报告')
+    parser.add_argument('--fetch', action='store_false', help='仅获取数据')
     
     args = parser.parse_args()
     

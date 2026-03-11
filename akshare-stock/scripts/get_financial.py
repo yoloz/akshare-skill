@@ -72,7 +72,7 @@ def display_financial(df: pd.DataFrame):
 def main():
     parser = argparse.ArgumentParser(description='获取财务数据')
     parser.add_argument('code', help='股票代码')
-    parser.add_argument('--no-cache', action='store_true', help='不使用缓存')
+    parser.add_argument('--no-cache', action='store_false', help='不使用缓存')
     
     args = parser.parse_args()
     

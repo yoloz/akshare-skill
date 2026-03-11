@@ -16,10 +16,8 @@ warnings.filterwarnings('ignore')
 
 try:
     import akshare as ak
-    import pandas as pd
-    import numpy as np
 except ImportError:
-    print("请先安装依赖: pip install akshare pandas numpy")
+    print("请先安装依赖: pip install akshare")
     sys.exit(1)
 
 from calc_technical import calc_all_indicators, analyze_signals

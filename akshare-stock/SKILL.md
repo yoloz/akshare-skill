@@ -1,9 +1,9 @@
 ---
-name: akshare
+name: akshare-stock
 description: 使用 AKShare 库获取和分析中国 A 股市场数据。AKShare 是免费开源的 Python 金融数据接口库，无需注册或 Token。支持：股票实时行情、历史K线、财务报表、估值指标、资金流向、技术指标、定时任务等。当用户需要获取 A 股股价、分析个股基本面、查询财务数据、计算技术指标、分析资金流向时使用此 skill。
 ---
 
-# AKShare金融数据分析Skill
+# AKShare分析股票Skill
 
 使用AKShare库获取中国A股市场数据并进行分析。AKShare是**免费开源**的金融数据接口，无需注册或Token。
 
@@ -12,7 +12,8 @@ description: 使用 AKShare 库获取和分析中国 A 股市场数据。AKShare
 ### 环境准备
 
 ```bash
-pip install akshare pandas numpy pyyaml
+# pip install akshare pandas pyyaml
+pip install akshare pandas
 ```
 
 ### 使用脚本
@@ -20,20 +21,20 @@ pip install akshare pandas numpy pyyaml
 ```bash
 
 # 智能投资分析（推荐）
-/app/working/active_skills/akshare/scripts/analyze_investment.py 002475
+/app/working/active_skills/akshare-stock/scripts/analyze_investment.py 002475
 
 # 实时行情
-/app/working/active_skills/akshare/scripts/get_realtime_quote.py 002475
+/app/working/active_skills/akshare-stock/scripts/get_realtime_quote.py 002475
 
 # 历史K线
-/app/working/active_skills/akshare/scripts/get_history_kline.py 002475 --days 60
+/app/working/active_skills/akshare-stock/scripts/get_history_kline.py 002475 --days 60
 
 # 技术指标
-/app/working/active_skills/akshare/scripts/calc_technical.py 002475
+/app/working/active_skills/akshare-stock/scripts/calc_technical.py 002475
 
 # 综合分析报告
-#/app/working/active_skills/akshare/scripts/stock_analyzer.py 002475 -o report.md
-/app/working/active_skills/akshare/scripts/stock_analyzer.py 002475
+#/app/working/active_skills/akshare-stock/scripts/stock_analyzer.py 002475 -o report.md
+/app/working/active_skills/akshare-stock/scripts/stock_analyzer.py 002475
 ```
 
 ## 脚本列表
@@ -74,7 +75,7 @@ pip install akshare pandas numpy pyyaml
 ### 1. 智能投资分析
 
 ```bash
-/app/working/active_skills/akshare/scripts/analyze_investment.py 002475
+/app/working/active_skills/akshare-stock/scripts/analyze_investment.py 002475
 ```
 
 自动分析：
@@ -88,7 +89,7 @@ pip install akshare pandas numpy pyyaml
 ### 2. 技术指标
 
 ```bash
-/app/working/active_skills/akshare/scripts/calc_technical.py 002475
+/app/working/active_skills/akshare-stock/scripts/calc_technical.py 002475
 ```
 
 支持指标：
@@ -114,10 +115,10 @@ pip install akshare pandas numpy pyyaml
 
 ```bash
 # 立即执行
-/app/working/active_skills/akshare/scripts/scheduler.py --run-now
+/app/working/active_skills/akshare-stock/scripts/scheduler.py --run-now
 
 # 后台运行调度器
-/app/working/active_skills/akshare/scripts/scheduler.py
+/app/working/active_skills/akshare-stock/scripts/scheduler.py
 ```
 
 配置 `config.yaml` 设置监控股票和执行时间。
@@ -129,14 +130,14 @@ pip install akshare pandas numpy pyyaml
 所有脚本默认输出 **Markdown** 格式，可直接预览或保存：
 
 ```bash
-# /app/working/active_skills/akshare/scripts/analyze_investment.py 002475 -o 分析报告.md
-/app/working/active_skills/akshare/scripts/analyze_investment.py 002475
+# /app/working/active_skills/akshare-stock/scripts/analyze_investment.py 002475 -o 分析报告.md
+/app/working/active_skills/akshare-stock/scripts/analyze_investment.py 002475
 ```
 
 ## 文件结构
 
 ```
-akshare/
+akshare-stock/
 ├── SKILL.md                 # 本文档
 ├── config.yaml              # 配置文件
 ├── references/

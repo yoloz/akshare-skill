@@ -87,7 +87,7 @@ def main():
     parser.add_argument('--end', help='结束日期 YYYYMMDD')
     parser.add_argument('--period', default='daily', help='周期: daily/weekly/monthly')
     parser.add_argument('--adjust', default='qfq', help='复权: qfq/hfq/""')
-    parser.add_argument('--no-cache', action='store_true', help='不使用缓存')
+    parser.add_argument('--no-cache', action='store_false', help='不使用缓存')
     
     args = parser.parse_args()
     

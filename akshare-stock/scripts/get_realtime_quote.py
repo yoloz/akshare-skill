@@ -57,7 +57,7 @@ def get_realtime_quote(codes: list, Use_markdown: bool = True, use_cache: bool =
 def main():
     parser = argparse.ArgumentParser(description='获取实时行情')
     parser.add_argument('codes', nargs='+', help='股票代码列表')
-    parser.add_argument('--no-cache', action='store_true', help='不使用缓存')
+    parser.add_argument('--no-cache', action='store_false', help='不使用缓存')
     
     args = parser.parse_args()
     
